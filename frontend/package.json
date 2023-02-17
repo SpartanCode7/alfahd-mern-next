@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@zeit/next-css": "^1.0.1",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.58.1"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.2.0"
+  }
+}
