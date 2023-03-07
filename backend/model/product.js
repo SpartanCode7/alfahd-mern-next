@@ -8,7 +8,7 @@ const productSchma = new Schema({
     discription: {
         type: String
     },
-    permalink: { 
+    permalink: {
         type: String
     },
     location: {
@@ -20,11 +20,12 @@ const productSchma = new Schema({
     discount: {
         type: String
     },
-    taxstatus: {
+    image: {
         type: String
     },
-    taxclass: {
-        type: String
+    category: {
+        type: String,
+        enum: ['Mens Fashion', 'Women Fashion', 'Bedding', 'Sofa Covers', 'Waterproof', 'Accessories']
     },
     currency: {
         type: String

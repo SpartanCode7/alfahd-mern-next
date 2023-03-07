@@ -8,7 +8,7 @@ const categoriesSchma = new Schema({
     slug: {
         type: String
     },
-    category: { 
+    image: { 
         type: String
     },
     discription: {

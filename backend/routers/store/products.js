@@ -1,15 +1,7 @@
-const express = require('express');
+const express = require('express')
 const app = express() 
 const router = express.Router()
 const Products = require('../../model/product')
-
-// app.use(function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*") 
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept") 
-//     next()
-// })
-
-// app.use('/Productsgories', cors(), api)
 
 // Getting all
 router.get('/', async (req, res) => {
@@ -67,7 +59,7 @@ router.patch('/:id', getProducts, async (req, res) => {
    }
 })
 
-// // Deleteing one
+// Deleteing one
 router.delete('/:id', getProducts, async (req, res) => {
     try {
         await res.Products.remove()

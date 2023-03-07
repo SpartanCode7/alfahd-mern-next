@@ -3,6 +3,12 @@ const app = express()
 const router = express.Router()
 const Cate = require('../../model/categories')
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*") 
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept") 
+    next()
+})
+
 // Getting all
 router.get('/', async (req, res) => {
    try {
@@ -23,7 +29,7 @@ router.post('/', async (req, res) => {
      const cates = new Cate({
         name: req.body.name,
         slug: req.body.slug,
-        category: req.body.category,
+        image: req.body.image,
         discription: req.body.discription
      })
      try {
@@ -51,7 +57,7 @@ router.patch('/:id', getCategories, async (req, res) => {
    }
 })
 
-// // Deleteing one
+// Deleteing one
 router.delete('/:id', getCategories, async (req, res) => {
     try {
         await res.cate.remove()
