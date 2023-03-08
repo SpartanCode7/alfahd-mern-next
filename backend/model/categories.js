@@ -11,7 +11,7 @@ const categoriesSchma = new Schema({
     image: { 
         type: String
     },
-    discription: {
+    category: {
         type: String
     }
 }) 

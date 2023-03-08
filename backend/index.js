@@ -4,7 +4,10 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express')
 require("./config/db").connect()
 var app = express()
+app.use(express.static('public'));
 app.use(express.json())
+app.use(express.urlencoded({extended:false}));
+
 const router = express.Router()
 const register = require("./routers/auth/register")
 const verifyToken = require("./middleware/auth")
